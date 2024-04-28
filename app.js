@@ -19,11 +19,11 @@ app.use(logger('dev')); // can remove later
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-
 app.use(express.static('public'));
 
 // Define routes
 app.use("/", indexRouter);
+app.use("/goToLoginPage", loginRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
