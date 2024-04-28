@@ -8,6 +8,37 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
+    <nav class="bg-green-700 px-2 py-2 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo and Website Name -->
+            <div class="flex items-center">
+                <img src="./image0.png" alt="Logo" class="h-10 mr-3"> <!-- Ensure your image path is correct -->
+                <a href="#" class="text-lg font-semibold text-white">GreenSource Garden Finder</a>
+            </div>
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex space-x-4">
+                <a href="/" class="text-white hover:text-green-300">Home</a>
+                <a href="/about" class="text-white hover:text-green-300">About</a>
+                <a href="#" class="text-white hover:text-green-300">Map</a>
+                <a href="/contact" class="text-white hover:text-green-300">Contact</a>
+
+            </div>
+            <!-- Mobile menu button -->
+            <button onclick="toggleMenu()" class="md:hidden flex items-center text-white focus:outline-none focus:shadow-outline" type="button">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile menu, hidden initially -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <a href="/" class="text-white hover:text-green-300">Home</a>
+            <a href="/about" class="text-white hover:text-green-300">About</a>
+            <a href="#" class="text-white hover:text-green-300">Map</a>
+            <a href="/contact" class="text-white hover:text-green-300">Contact</a>
+
+        </div>
+    </nav>
     <div class="flex max-h-screen overflow-hidden">
         <div class="flex-1 basis-1/2">
             <img class="object-contain" src="https://images.unsplash.com/photo-1621460249485-4e4f92c9de5d?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="picture of person digging out a lettuce leaf from an urban garden">
