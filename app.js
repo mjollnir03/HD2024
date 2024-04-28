@@ -17,6 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 const publicDirectory = path.join(__dirname, 'public');
+app.set('public', publicDirectory);
 
 // Serve static files from the public directory
 app.use(express.static(publicDirectory));
