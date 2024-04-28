@@ -3,14 +3,76 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example EJS File with Tailwind CSS</title>
+    <title>Welcome to Our Site!</title>
     <!-- Link to Tailwind CSS via CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://images.pexels.com/photos/5503188/pexels-photo-5503188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the background image */
+        }
+    </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center h-screen">
-    <div class="text-center">
-        <h1 class="text-4xl font-bold text-blue-600 mb-4">Hello from EJS with Tailwind CSS!</h1>
-        <p class="text-lg text-gray-700">This is an example EJS file using Tailwind CSS via CDN.</p>
+<body class="bg-transparent">
+    <!-- Navigation Bar -->
+    <nav class="bg-green-700 px-2 py-2 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo and Website Name -->
+            <div class="flex items-center">
+                <img src="./image0.png" alt="Logo" class="h-10 mr-3"> <!-- Ensure your image path is correct -->
+                <a href="#" class="text-lg font-semibold text-white">GreenSource Garden Finder</a>
+            </div>
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex space-x-4">
+                <a href="/" class="text-white hover:text-green-300">Home</a>
+                <a href="/about" class="text-white hover:text-green-300">About</a>
+                <a href="#" class="text-white hover:text-green-300">Map</a>
+                <a href="/contact" class="text-white hover:text-green-300">Contact</a>
+
+            </div>
+            <!-- Mobile menu button -->
+            <button onclick="toggleMenu()" class="md:hidden flex items-center text-white focus:outline-none focus:shadow-outline" type="button">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile menu, hidden initially -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <a href="/" class="text-white hover:text-green-300">Home</a>
+            <a href="/about" class="text-white hover:text-green-300">About</a>
+            <a href="#" class="text-white hover:text-green-300">Map</a>
+            <a href="/contact" class="text-white hover:text-green-300">Contact</a>
+
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <div class="flex items-center justify-center h-screen -mt-16">
+        <div class="text-center">
+            <h1 class="text-5xl font-bold text-white">Welcome to GreenSource Garden Finder!</h1>
+            <p class="text-lg text-white mt-4">Discover local gardens, connect with nature, and enhance your green thumb with our comprehensive guide to sustainable gardening.</p>
+            <form action="/goToLoginPage" method="get">
+                <button type="submit" class="mt-8 inline-block bg-green-700 text-white px-6 py-3 rounded shadow hover:bg-green-700 transition duration-300">Get Started</button>
+            </form>
+        </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 text-center py-3">
+        <span class="text-sm text-black">&copy; 2024 GreenSource Garden Finder. All rights reserved.</span>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
