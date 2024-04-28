@@ -14,4 +14,6 @@ var loginController = require("../controllers/loginController.js");
 
 router.get("/", loginController.loadLoginPage);
 
+router.post("/", loginController.attemptLogin);
+
 module.exports = router;
