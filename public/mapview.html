@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+<title>
+    GreenSource
+</title>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> 
+ 
+<!--    <link rel="stylesheet" type="text/css" href="/style.css" />-->
+    <script type="module" src="/map.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    <nav class="bg-green-700 px-8 py-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo and Website Name -->
+            <div class="flex items-center">
+                <img src="/views/image0.png" alt="Logo" class="h-10 mr-3"> <!-- Update path to your logo image -->
+                <a href="#" class="text-lg font-semibold text-white">GreenSource Garden Finder</a>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="text-white hover:text-green-300">Home</a>
+                <a href="#" class="text-white hover:text-green-300">About</a>
+                <a href="#" class="text-white hover:text-green-300">Services</a>
+                <a href="#" class="text-white hover:text-green-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <div class="fullcontainer relative">
+        <div class="absolute w-full h-screen" id="map">
+            
+            <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+                ({key: "AIzaSyBjp0uyrr3IVQ_zXutsvk96HiMl3I8SUrI", v: "weekly"});</script>
+        </div>
+    </div>
+    
+    <!-- prettier-ignore 
+    \
+
+    <div class = "absolute right-2 my-20 mr-40 w-1/4 items-center bg-white container">
+            <div class="block">
+                container 1
+            </div>
+            <div class ="block">
+                container 2
+            </div>
+        </div>
+
+
+        
+<div id="fullcontainer" style="position: relative;">
+  <div id="map-canvas" style="position: absolute; z-index: 1;"></div>
+  <div class="blocktest" style="position: absolute; z-index: 2;">div that should be above the map</div>
+</div>
+-->
+    
+  </body>
+</html>
+
+
