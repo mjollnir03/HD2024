@@ -1,6 +1,6 @@
 # GreenSource Garden Finder
 
-The GreenSource Garden Finder is an online platform dedicated to promoting community sustainability and food sovereignty. By offering a user-friendly interface, we help users discover nearby gardens and learn about the types of produce they grow. Our aim is to enhance support for local gardens, thereby strengthening community food security and economic independence, and providing educational resources to increase public awareness of healthy eating and sustainable agriculture.
+The GreenSource Garden Finder is an online platform dedicated to promoting community sustainability and food sovereignty. By offering a user-friendly interface, we help users discover nearby community-enabled gardens and learn about the types of produce they grow. Our aim is to enhance support for local gardens, thereby strengthening community food security and economic independence, and providing educational resources to increase public awareness of healthy eating and sustainable agriculture.
 
 ## Core Features
 
@@ -20,7 +20,7 @@ To start exploring the GreenSource Gardens near you, please follow these steps:
 ## Social Good Value
 
 - **Food Sovereignty and Security**: Our platform promotes food sovereignty by supporting local gardens, helping communities maintain control over food sources and ensuring a supply of fresh, nutritious food.
-- **Economic and Environmental Sustainability**: Supporting local gardens helps protect the environment, reduces carbon footprint due to food transportation, and strengthens community economy through local employment.
+- **Economic and Environmental Sustainability**: Supporting local gardens helps protect the environment, reduces carbon footprint due to food transportation, and can strengthen community economy through possible local employment.
 - **Education and Cultural Heritage**: The educational resources we provide not only help people understand how to eat healthily but also preserve the agricultural knowledge and culture of indigenous populations, supporting food as a carrier of cultural identity and traditions.
 - **Promoting Public Health**: By advocating for the consumption of fresh, minimally processed local food, our platform contributes to improving dietary habits and promoting overall community health.
 
