@@ -9,6 +9,7 @@ var logger = require('morgan');
 const app = express();
 
 var indexRouter = require("./routes/indexRouter.js");
+var loginRouter = require("./routes/loginRouter.js");
 
 // Set the views directory and view engine
 app.set('views', path.join(__dirname, 'views'));
@@ -19,11 +20,17 @@ app.use(logger('dev')); // can remove later
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-
 app.use(express.static('public'));
+
+// Set the path to your public directory
+const publicDirectory = path.join(__dirname, 'public');
+
+// Serve static files from the public directory
+app.use(express.static(publicDirectory));
 
 // Define routes
 app.use("/", indexRouter);
+app.use("/goToLoginPage", loginRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
