@@ -15,7 +15,7 @@ module.exports.loadLoginPage = async function(req, res) {
     res.render("login");
 }
 
-module.exports.attemptLogin = async function(req, res) {
+module.exports.attemptLogin = async function(req, res, next) {
     var value_password = req.body.password;
     var value_email = req.body.email;
 
@@ -23,6 +23,7 @@ module.exports.attemptLogin = async function(req, res) {
 
     try {
         const user = await lookUpAccount(value_email, value_password);
+        
 
         res.render('loginResult', { userFound: !!user }); // Render loginResult.ejs with userFound variable
     } catch (error) {
