@@ -17,4 +17,6 @@ router.get("/", indexController.loadIndexPage);
 // Assuming indexController has a method to handle the About page
 router.get('/about', indexController.loadAboutPage);
 
+router.get('/contact', indexController.loadContactPage);
+
 module.exports = router;
