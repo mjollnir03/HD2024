@@ -20,23 +20,37 @@
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo and Website Name -->
             <div class="flex items-center">
-                <img src="./image0.png" alt="Logo" class="h-10 mr-3"> <!-- Update path to your logo image -->
+                <img src="./image0.png" alt="Logo" class="h-10 mr-3"> <!-- Ensure your image path is correct -->
                 <a href="#" class="text-lg font-semibold text-white">GreenSource Garden Finder</a>
             </div>
-            <div class="flex space-x-4">
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex space-x-4">
                 <a href="#" class="text-white hover:text-green-300">Home</a>
                 <a href="#" class="text-white hover:text-green-300">About</a>
                 <a href="#" class="text-white hover:text-green-300">Services</a>
                 <a href="#" class="text-white hover:text-green-300">Contact</a>
             </div>
+            <!-- Mobile menu button -->
+            <button onclick="toggleMenu()" class="md:hidden flex items-center text-white focus:outline-none focus:shadow-outline" type="button">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile menu, hidden initially -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <a href="#" class="block px-4 py-2 text-white">Home</a>
+            <a href="#" class="block px-4 py-2 text-white">About</a>
+            <a href="#" class="block px-4 py-2 text-white">Services</a>
+            <a href="#" class="block px-4 py-2 text-white">Contact</a>
         </div>
     </nav>
     
     <!-- Hero Section -->
     <div class="flex items-center justify-center h-screen -mt-16">
-        <div class="text-center">
-            <h1 class="text-5xl font-bold text-white">Welcome to GreenSource Garden Finder!</h1>
-            <p class="text-lg text-white mt-4">Discover local gardens, connect with nature, and enhance your green thumb with our comprehensive guide to sustainable gardening.</p>
+        <div class="text-center px-4">
+            <h1 class="text-3xl md:text-5xl font-bold text-white">Welcome to GreenSource Garden Finder!</h1>
+            <p class="text-md md:text-lg text-white mt-4">Discover local gardens, connect with nature, and enhance your green thumb with our comprehensive guide to sustainable gardening.</p>
             <a href="#" class="mt-8 inline-block bg-green-700 text-white px-6 py-3 rounded shadow hover:bg-green-700 transition duration-300">Get Started</a>
         </div>
     </div>
@@ -45,5 +59,16 @@
     <footer class="bg-gray-200 text-center py-3">
         <span class="text-sm text-black">&copy; 2024 GreenSource Garden Finder. All rights reserved.</span>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
