@@ -8,6 +8,8 @@ var logger = require('morgan');
 
 const app = express();
 
+var indexRouter = require("./routes/indexRouter.js");
+
 // Set the views directory and view engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -19,9 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // Define routes
-app.get('/', function(req, res, next) {
-    res.render('index');
-});
+app.use("/", indexRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
